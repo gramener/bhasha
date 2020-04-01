@@ -1,0 +1,25 @@
+{
+  "num_frames": 1,
+  "duration": "None",
+  "tags": {
+    "T1":  { "frames": [1], "box": [145,  200, 250,  245], "color":  "black"},
+    "T2":  { "frames": [1], "box": [250,  200, 362,  245], "color":  "black"},
+    "T3":  { "frames": [1], "box": [362,  200, 468,  245], "color":  "black"},
+    "T4":  { "frames": [1], "box": [468,  200, 576,  245], "color":  "black"},
+    "T5":  { "frames": [1], "box": [576,  200, 683,  245], "color":  "black"},
+    "T6":  { "frames": [1], "box": [683,  200, 795,  245], "color":  "black"},
+    "T7":  { "frames": [1], "box": [795,  200, 905,  245], "color":  "black"},
+    "T8":  { "frames": [1], "box": [905,  200, 1010, 245], "color":  "black"},
+    "T9":  { "frames": [1], "box": [1010, 200, 1120, 245], "color":  "black"},
+    "T10": { "frames": [1], "box": [1120, 200, 1225, 245], "color":  "black"},
+    "T11": { "frames": [1], "box": [40,   270, 144,  354], "color":  "black"},
+    "T12": { "frames": [1], "box": [40,   394, 144,  480], "color":  "black"},
+    "T13": { "frames": [1], "box": [40,   520, 144,  605], "color":  "black"},
+    "T14": { "frames": [1], "box": [96,   645, 270,  695], "color":  "black"},
+    "T15": { "frames": [1], "box": [336,  645, 507,  695], "color":  "black"},
+    "T16": { "frames": [1], "box": [576,  645, 747,  695], "color":  "black"},
+    "T17": { "frames": [1], "box": [816,  645, 987,  695], "color":  "black"},
+    "T18": { "frames": [1], "box": [1056, 645, 1227, 695], "color":  "black"},
+    "T19": { "frames": [1], "box": [245,   10, 1010,  78], "color":  "black"}
+  }
+}
