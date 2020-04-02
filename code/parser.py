@@ -47,7 +47,7 @@ def bake_template(path: Path) -> dict:
         'meta': {'duration': config['duration']}
     }
     for frame in vframes:
-        template[str(frame)] = [{'caption': t, 'box': v['box'], 'fill': v['color']}
+        template[str(frame)] = [{'caption': t, 'box': v['box'], 'fill': v['color'],'bgloc':v.get('bgloc',None)}
                                 for t, v in config['tags'].items() if frame in v['frames']]
 
     return template

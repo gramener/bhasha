@@ -76,7 +76,13 @@ def draw_caption(image: Union[np.ndarray, None], data: dict, captions: List[dict
         caption = data[c['caption']]
         box = Box(*c['box'])
         fill = c['fill']
-        # draw.rectangle([(box.L, box.T), (box.R, box.B)], fill="#ddffff", outline="blue")
+        if c.get('bgloc') is not None:
+            bgloc = c['bgloc']
+            cordinate = bgloc[0],bgloc[1]
+            bgcolor = _image.getpixel((cordinate))[:3]
+            bgfill = f"rgb{bgcolor}"
+            draw.rectangle([(box.L, box.T), (box.R, box.B)], fill=bgfill)
+        
         draw_clean_text(draw, caption, lang, box, fill, spacing=10, pad=8)
 
     return np.array(_image) if gif else _image
