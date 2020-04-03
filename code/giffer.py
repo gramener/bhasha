@@ -45,7 +45,7 @@ def draw_clean_text(draw: ImageDraw, text: str, lang: str, box: Box, fill: str =
         w, h = draw.multiline_textsize(text, font=F, spacing=spacing)
 
     # TODO: fix, uncomment this if you want a static size & not dynamic size for texts
-    # size = 30 if size < 70 else 100
+    size = 34 if size < 70 else 100
 
     F = ImageFont.truetype(font=font_path, size=size)
     w, h = F.getsize_multiline(text)

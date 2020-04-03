@@ -1,0 +1,9 @@
+{
+  "num_frames": 1,
+  "duration": "None",
+  "tags": {
+    "T1":  { "frames": [1], "box": [320,  10,  920,   84], "color":  "white"},
+    "T2":  { "frames": [1], "box": [320,  335, 920,  412], "color":  "white"},
+    "T3":  { "frames": [1], "box": [566,  162, 714,  241], "color":  "white"}
+  }
+}

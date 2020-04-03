@@ -77,9 +77,9 @@ def parse(path: str = typer.Option(..., '--path', '-p', help='Path to the source
         template['meta']['lang'] = L
 
         if SUFFIX == '.gif':
-            gifware(SRC, data[L].to_dict(), template, f'{OUT}/{L}.gif')
+            gifware(SRC, data[L].to_dict(), template, f'{OUT}/{SRC.stem}-{L}.gif')
         else:
-            imgware(SRC, data[L].to_dict(), template, f'{OUT}/{L}.png')
+            imgware(SRC, data[L].to_dict(), template, f'{OUT}/{SRC.stem}-{L}.png')
 
 
 if __name__ == '__main__':
