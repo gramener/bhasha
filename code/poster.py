@@ -13,7 +13,7 @@ def splitone(path: str = typer.Option(..., '--path', '-p', help='Pass path to th
         for (i, frame) in enumerate(io.get_reader(gif)):
             if i == num:
                 frame = cv2.cvtColor(frame, cv2.COLOR_RGBA2RGB)
-                io.imwrite(f'{f}/{gif.parent.stem}-{gif.stem}.png', frame)
+                io.imwrite(f'{f}/{gif.stem}.png', frame)
 
 
 if __name__ == '__main__':
