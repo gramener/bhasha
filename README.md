@@ -57,7 +57,15 @@ python split_merge.py split -p data/src/{filename}.gif
 ```
 
 4. Clean the slate, remove texts from the GIF using Photoshop/GIMP/Paint or if you have a designer friend, take their help!  
-This process is manual for now, automating this would require building a UI which is somthing we are thinking to build, but not right now.
+
+  OR
+
+  To avoid the above steps, this process is automated to a certain extent. Will try to automate completely.  Here's you do it: In your .json file, include the pixel location of background color you want.
+
+`
+"T1": { "frames": [1], "box": [374, 38, 1145, 95], "color": "white",__"bgloc":[232,30]__}, 
+"T2": { "frames": [1], "box": [344, 28, 1445, 55], "color": "white"}
+`
 
 5. Create a template JSON file, name it {filename}.json & put inside the `data` directory. For eg: look into `data/social-distance.json`.  
 Again take the help of a designer friend or use application like Photoshop/GIMP to find the box coordinates `(left, top, right, bottom)`
