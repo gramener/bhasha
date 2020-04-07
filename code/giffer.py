@@ -45,7 +45,7 @@ def draw_clean_text(draw: ImageDraw, text: str, lang: str, box: Box, fill: str =
         w, h = draw.multiline_textsize(text, font=F, spacing=spacing)
 
     # TODO: fix, uncomment this if you want a static size & not dynamic size for texts
-    size = 34 if size < 70 else 100
+    # size = 34 if size < 70 else 100
 
     F = ImageFont.truetype(font=font_path, size=size)
     w, h = F.getsize_multiline(text)
@@ -82,7 +82,7 @@ def draw_caption(image: Union[np.ndarray, None], data: dict, captions: List[dict
             bgcolor = _image.getpixel((cordinate))[:3]
             bgfill = f"rgb{bgcolor}"
             draw.rectangle([(box.L, box.T), (box.R, box.B)], fill=bgfill)
-        
+
         draw_clean_text(draw, caption, lang, box, fill, spacing=10, pad=8)
 
     return np.array(_image) if gif else _image
@@ -97,7 +97,7 @@ def gifware(file: Path, data: dict, template: dict, save: str = 'test.gif') -> N
         template: Instructions on where to position the text
         save: Path to save the modified GIF
     '''
-    gif = io.mimread(file)
+    gif = io.get_reader(file)
     frames = []
 
     for (i, frame) in enumerate(gif):
